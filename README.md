@@ -24,9 +24,9 @@ node server.js
 ```
 
 ### Starting React App:
-Navigate to the MedianPrimes/touchbistro directory:
+From the root project directory navigate to the touchbistro directory:
 ```
-cd touchbistro/
+cd touchbistro
 ```
 Run the following command to start the React front-end server:
 ```
