@@ -42,27 +42,27 @@ describe('MedianPrimeComponent', () => {
 
     fireEvent.change(input, { target: { value: 'e' } });
     fireEvent.click(button);
-    expect(screen.findByText('Invalid input. Please enter a number greater than 1.')).toBeInTheDocument();
+    expect(screen.findByText('Input value must be integer.')).toBeInTheDocument();
     expect(screen.queryByText('Median Primes:')).toBeNull();
 
     fireEvent.change(input, { target: { value: '' } });
     fireEvent.click(button);
-    expect(screen.findByText('Invalid input. Please enter a number greater than 1.')).toBeInTheDocument();
+    expect(screen.findByText('Input value must be integer.')).toBeInTheDocument();
     expect(screen.queryByText('Median Primes:')).toBeNull();
 
     fireEvent.change(input, { target: { value: '0' } });
     fireEvent.click(button);
-    expect(screen.findByText('Invalid input. Please enter a number greater than 1.')).toBeInTheDocument();
+    expect(screen.findByText('Data Error: Invalid input. Please enter a number greater than 1.')).toBeInTheDocument();
     expect(screen.queryByText('Median Primes:')).toBeNull();
 
     fireEvent.change(input, { target: { value: '-1' } });
     fireEvent.click(button);
-    expect(screen.findByText('Invalid input. Please enter a number greater than 1.')).toBeInTheDocument();
+    expect(screen.findByText('Data Error: Invalid input. Please enter a number greater than 1.')).toBeInTheDocument();
     expect(screen.queryByText('Median Primes:')).toBeNull();
 
     fireEvent.change(input, { target: { value: '-10000' } });
     fireEvent.click(button);
-    expect(screen.findByText('Invalid input. Please enter a number greater than 1.')).toBeInTheDocument();
+    expect(screen.findByText('Data Error: Invalid input. Please enter a number greater than 1.')).toBeInTheDocument();
     expect(screen.queryByText('Median Primes:')).toBeNull();
   });
 });
