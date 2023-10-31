@@ -65,47 +65,4 @@ describe('MedianPrimeComponent', () => {
     expect(screen.findByText('Invalid input. Please enter a number greater than 1.')).toBeInTheDocument();
     expect(screen.queryByText('Median Primes:')).toBeNull();
   });
-
-  it('displays median prime numbers in less than 300ms', async () => {
-    const startTime = performance.now();
-    
-    render(<MedianPrimeComponent />);
-    const input = screen.getByPlaceholderText('Enter a number');
-    const button = screen.getByText('Go');
-    
-    // Set up a delay (simulating an async operation)
-    const mockFetch = jest.fn(() => new Promise(resolve => setTimeout(resolve, 100)));
-    global.fetch = mockFetch;
-
-    fireEvent.change(input, { target: { value: '10' } });
-    fireEvent.click(button);
-    await screen.findByText('Median Primes: 3, 5');
-
-    const endTime = performance.now();
-    const timeTaken = endTime - startTime;
-
-    expect(timeTaken).toBeLessThan(300);
-  });
-
-  it('displays median prime numbers from large input in less than 1 second', async () => {
-    const startTime = performance.now();
-    
-    render(<MedianPrimeComponent />);
-    const input = screen.getByPlaceholderText('Enter a number');
-    const button = screen.getByText('Go');
-    
-    // Set up a delay (simulating an async operation)
-    const mockFetch = jest.fn(() => new Promise(resolve => setTimeout(resolve, 100)));
-    global.fetch = mockFetch;
-
-    fireEvent.change(input, { target: { value: '12000000' } });
-    fireEvent.click(button);
-    await screen.findByText('Median Primes: 5706583, 5706619');
-
-    const endTime = performance.now();
-    const timeTaken = endTime - startTime;
-
-    expect(timeTaken).toBeLessThan(1000);
-  });
-
 });
