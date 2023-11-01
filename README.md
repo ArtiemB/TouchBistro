@@ -28,11 +28,11 @@ node server.js
 ```
 
 ### Starting React App:
-Open another terminal and navigate to the root project directory. Run the following command:
+Open another terminal and navigate to the root project directory. Navigate to the react frontend by running:
 ```
 cd touchbistro
 ```
-Run the following command from the touchbistro frontend folder to start the React app:
+Start React app:
 ```
 npm start
 ```
