@@ -18,17 +18,21 @@ Artiem Babaryko
 ## Running the App
 
 ### Starting NodeJS Server:
-Navigate to the root directory of the project and run the following command to start the NodeJS back-end server:
+Navigate to the project root directory. Run the following command:
+```
+npm install
+```
+Start the NodeJS back-end server by running the following command:
 ```
 node server.js
 ```
 
 ### Starting React App:
-From the root project directory navigate to the touchbistro directory:
+Open another terminal and navigate to the root project directory. Run the following command:
 ```
 cd touchbistro
 ```
-Run the following command to start the React front-end server:
+Run the following command from the touchbistro frontend folder to start the React app:
 ```
 npm start
 ```
