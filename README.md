@@ -18,7 +18,7 @@ Artiem Babaryko
 ## Running the App
 
 ### Starting NodeJS Server:
-Navigate to the project root directory. Run the following command:
+Navigate to the project root directory. Install dependencies:
 ```
 npm install
 ```
@@ -28,9 +28,13 @@ node server.js
 ```
 
 ### Starting React App:
-Open another terminal and navigate to the root project directory. Navigate to the react frontend by running:
+Open another terminal and navigate to the root project directory. Navigate to the react frontend:
 ```
 cd touchbistro
+```
+Install dependencies:
+```
+npm install
 ```
 Start React app:
 ```
